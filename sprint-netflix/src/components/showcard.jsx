@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import PostData from "../data/data.json";
 class Showcard extends Component {
 render() {
 return (
-<React.Fragment>
-<div style={{ textAlign: "center",marginTop:'10rem' }}>
-<h1>Posts is there</h1>
-</div>
-</React.Fragment>
+<div>
+  {PostData.movie.map((movie, index)=>{
+    return <h1>{movie.Title}</h1>
+  })}
+  </div>
 );}}
 export default Showcard;
