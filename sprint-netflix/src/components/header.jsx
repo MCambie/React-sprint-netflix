@@ -1,24 +1,14 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from 'react'
+
 class Header extends Component {
-active = {
-fontWeight: "bold",
-color: "red"
-};
-header = {
-display: "flex",
-justifyContent: "space-evenly",
-listStyle: "none"
-};
-render() {
-return (
-<div style={this.header}>
-<NavLink to="/homepage" activeStyle={this.active}>
-Home
-</NavLink>
-<NavLink to="/showcard" activeStyle={this.active}>
-Showcard
-</NavLink>
-</div>
-);}}
+  render() {
+      return (
+          <header>
+          <input type="text" placeholder="search" value={this.props.userInput} onChange={this.props.Funct} />
+          </header>
+      )
+  }
+}
+
+
 export default Header;
